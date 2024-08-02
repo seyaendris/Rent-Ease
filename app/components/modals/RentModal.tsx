@@ -109,7 +109,8 @@ const RentModal = () => {
                     title="Where is your place located?"
                     subtitle="Help guest find you!"
                     />
-                    <CountrySelect />
+                    <CountrySelect 
+                        />
             </div>
         )
     }
