@@ -2,6 +2,7 @@
 
 import useCountries from '@/app/hooks/useCountries'
 import Select from 'react-select'
+import Flag from 'react-world-flags'
 
 export type CountrySelectValue = {
     flag: string
@@ -22,6 +23,7 @@ const CountrySelect: React.FC<CountrySelectProps> = ({
 }) => {
     const { getAll } = useCountries()
 
+   
     return (
         <div>
             <Select 
@@ -30,10 +32,10 @@ const CountrySelect: React.FC<CountrySelectProps> = ({
                 options={getAll()}
                 value={value}
                 onChange={(value) => onChange(value as CountrySelectValue)}
-                formatOptionLabel={(option: any) => (
+                formatOptionLabel={(option: CountrySelectValue) => (
                     <div className='flex flex-row items-center gap-3'>
-                        <div>
-                            {option.flag}
+                        <div className='text-xl'>
+                            <Flag code={option.value} alt={option.label} width="16" height="16" />
                         </div>
                         <div>
                             {option.label},
@@ -43,6 +45,21 @@ const CountrySelect: React.FC<CountrySelectProps> = ({
                         </div>
                     </div>
                 )}
+
+                classNames={{
+                    control: () => 'p-2 border-2',
+                    input: () => 'text-lg',
+                    option: () => 'text-lg'
+                }}
+                theme={(theme) => ({
+                    ...theme,
+                    borderRadius: 6,
+                    colors: {
+                        ...theme.colors,
+                        primary: 'black',
+                        primary25: '#bff2ea'
+                    }
+                })}
             />
         </div>
     )
