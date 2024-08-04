@@ -174,6 +174,14 @@ const RentModal = () => {
         )
     }
 
+if(step === STEPS.DESCRIPTION) {
+    bodyContent = (
+        <div className="flex flex-col gap-8">
+
+        </div>
+    )
+}
+
     return (
         <Modal
             isOpen={rentModal.isOpen} 
