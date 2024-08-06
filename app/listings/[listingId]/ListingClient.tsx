@@ -6,7 +6,13 @@ import ListingInfo from "@/app/components/listings/ListingInfo"
 import { categories } from "@/app/components/navbar/Categories"
 import { SafeListing, SafeUser } from "@/app/types"
 import { Reservation } from "@prisma/client"
-import { useMemo } from "react"
+import { useCallback, useEffect, useMemo, useState } from "react"
+import LoginModal from '../../components/modals/LoginModal';
+import useLoginModal from "@/app/hooks/useLoginModal"
+import { useRouter } from "next/navigation"
+import { differenceInCalendarDays, eachDayOfInterval } from "date-fns"
+import axios from "axios"
+import toast from "react-hot-toast"
 
 const initialDateRange = {
     startDate: new Date(),
@@ -28,6 +34,80 @@ const ListingClient:React.FC<ListingClientProps> = ({
     listing,
     currentUser
 }) => {
+    const LoginModal = useLoginModal()
+    const router = useRouter()
+
+    const disabledDates = useMemo(() => {
+        let dates: Date[] = []
+
+        reservations.forEach((reservation) =>{
+            const range = eachDayOfInterval({
+                start: new Date(reservation.startDate),
+                end: new Date(reservation.endDate)
+            })
+
+            dates = [...dates, ...range]
+        })
+
+        return dates
+
+    }, [reservations])
+
+    const [isLoading, setIsLoading] = useState(false)
+    const [totalPrice, setTotalPrice] = useState(listing.price)
+    const [dateRange, setDateRange] = useState(initialDateRange)
+
+    const onCreateReservation = useCallback(() => {
+        if(!currentUser) {
+            return LoginModal.onOpen()
+        }
+
+        setIsLoading(true)
+
+        axios.post('/api/reservation', {
+            totalPrice,
+            startDate: dateRange.startDate,
+            endDate: dateRange.endDate,
+            listingId: listing?.id
+        })
+        .then(() => {
+            toast.success('Successfully Reserved!')
+            setDateRange(initialDateRange)
+            //redirect to trips
+            router.refresh()
+        })
+        .catch(() => {
+            toast.error('Something went wrong')
+        })
+        .finally(() => {
+            setIsLoading(false)
+        })
+
+    }, [
+        totalPrice,
+        dateRange,
+        listing?.id,
+        router,
+        currentUser,
+        LoginModal
+    ])
+
+    useEffect(() => {
+        if(dateRange.startDate && dateRange.endDate) {
+            const dayCount = differenceInCalendarDays(
+                dateRange.endDate,
+                dateRange.startDate
+            )
+
+            if(dayCount && listing.price) {
+                setTotalPrice(dayCount * listing.price)
+            }
+            else {
+                setTotalPrice(listing.price)
+            }
+        }
+    }, [dateRange, listing.price])
+
     const category =useMemo(() => {
         return categories.find((item) => 
         item.label === listing.category)
