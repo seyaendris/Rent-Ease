@@ -39,10 +39,10 @@ const useFavorite = ({
             let request
 
             if(hasFavorited) {
-                request = () => axios.delete(`/api/favorities/${listingId}`)
+                request = () => axios.delete(`/api/favorites/${listingId}`)
             }
             else {
-                request = () => axios.post(`/api/favorities/${listingId}`)
+                request = () => axios.post(`/api/favorites/${listingId}`)
             }
 
             await request()
