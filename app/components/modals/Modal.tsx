@@ -71,10 +71,10 @@ const Modal: React.FC<ModalProps> = ({
     return (
         <>
             <div className="justify-center items-center flex overflow-x-hidden overflow-y-auto fixed inset-0 z-50 outline-none bg-neutral-800/70">
-                <div className="relative w-full md:w-4/6 lg:w-3/6 xl:w-2/5 mx-auto h-full md:h-fit mt-20 mb-3">
+                <div className="relative w-full md:w-4/6 lg:w-3/6 xl:w-2/5 mx-auto h-full md:h-fit md:mt-20 md:mb-3">
                     {/* CONTENT */}
                     <div className={`translate duration-300 h-full ${showModal ? 'translate-y-0' : 'translate-y-full'} ${showModal ? 'opacity-100' : 'opacity-0'}`}>
-                        <div className="h-full lg:h-auto md:h-auto border-0 rounded-lg shadow-lg relative flex flex-col w-full bg-white outline-none focus:outline-none">
+                        <div className="h-full lg:h-auto md:h-auto border-0 md:rounded-lg shadow-lg relative flex flex-col w-full bg-white outline-none focus:outline-none">
                             {/* HEADER */}
                             <div className="flex items-center p-3 rounded-t justify-center relative border-b-[1px]">
                                 <button
