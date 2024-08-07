@@ -3,7 +3,7 @@
 import { useRouter } from "next/navigation"
 import Container from "../components/Container"
 import Heading from "../components/Heading"
-import { SafeListing, SafeReservation, SafeUser } from "../types"
+import { SafeListing, SafeUser } from "../types"
 import { useCallback, useState } from "react"
 import axios from "axios"
 import toast from "react-hot-toast"
