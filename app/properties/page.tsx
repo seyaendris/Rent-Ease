@@ -3,6 +3,7 @@ import getCurrentUser from '../actions/getCurrentUser'
 import EmptyState from '../components/EmptyState'
 import getListings from '../actions/getListings'
 import PropertiesClient from './PropertiesClient'
+// import PropertiesClient from './PropertiesClient'
 
 const PropertiesPage = async () => {
     const currentUser = await getCurrentUser()

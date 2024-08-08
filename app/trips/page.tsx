@@ -3,6 +3,7 @@ import getCurrentUser from '../actions/getCurrentUser'
 import EmptyState from '../components/EmptyState'
 import getReservations from '../actions/getReservations'
 import TripsClient from './TripsClient'
+// import TripsClient from './TripsClient'
 
 const TripsPage = async () => {
     const currentUser = await getCurrentUser()

@@ -10,6 +10,7 @@ import { signOut } from "next-auth/react"
 import { SafeUser } from "@/app/types"
 import useRentModal from "@/app/hooks/useRentModal"
 import { useRouter } from "next/navigation"
+import { IoIosHome } from "react-icons/io"
 
 
 interface UserMenuProps {
@@ -44,14 +45,16 @@ const UserMenu: React.FC<UserMenuProps> = ({
         <div className="flex flex-row items-center gap-3">
             <div
                 onClick={onRent}
-                className="hidden md:block text-sm font-medium py-3 px-4 rounded-full hover:bg-neutral-100 transition cursor-pointer"
+                className="hidden md:flex md:gap-2 md:items-center text-sm font-medium py-3 px-4 rounded-full bg-cyan-50 hover:shadow-md hover:shadow-cyan-200  transition cursor-pointer"
                 >
-                    Rent your home
+                    <p>Rent your home</p>
+                    <IoIosHome size={20} className="text-cyan-600" />
+                    
             </div>
 
             <div
                 onClick={toggleOpen}
-                className="md:p-4 md:py-1 md:px-2 border-[1px] border-neutral-200 flex flex-row items-center gap-3 rounded-full cursor-pointer hover:shadow-md transition"
+                className="md:p-4 md:py-1 md:px-2 border-[1px] border-neutral-200 flex flex-row items-center gap-3 rounded-full cursor-pointer hover:shadow-md hover:shadow-cyan-200 transition"
                 >
                     <div className="hidden md:block">
                     <AiOutlineMenu  />
