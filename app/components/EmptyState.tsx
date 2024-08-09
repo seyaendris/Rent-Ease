@@ -17,7 +17,7 @@ const EmptyState:React.FC<EmptyStateProps> = ({
 }) => {
     const router = useRouter();
   return (
-    <div className="h-[40vh] flex flex-col gap-2 justify-center items-center bg-neutral-50 mx-52 mt-32 rounded-xl">
+    <div className="h-[40vh] flex flex-col gap-2 justify-center items-center bg-neutral-50 mx-10 md:mx-52 mt-32 rounded-xl">
       <Heading 
         title={title}
         subtitle={subtitle}
