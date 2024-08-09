@@ -12,9 +12,9 @@ const Avatar: React.FC<AvatarProps> = ({
     
   return (
     <Image 
-        className="rounded-full w-12 md:w-7"
+        className={`rounded-full ${src ? 'w-12' : 'w-[75px]'} md:w-10`}
         height={30}
-        width={30}
+        width={50}
         alt="Avatar"
         src={src || "/images/user.png"}
         
