@@ -64,7 +64,7 @@ const RentModal = () => {
 
     const Map = useMemo(() => dynamic(() => import('../Map'), {
         ssr: false
-    }), [location])
+    }), [])
 
     const setCustomValue = (id: string, value: any) => {
         setValue(id, value, {
@@ -203,56 +203,57 @@ const RentModal = () => {
         )
     }
 
-if(step === STEPS.DESCRIPTION) {
-    bodyContent = (
-        <div className="flex flex-col gap-8">
-            <Heading 
-                title="How would you describe your place?"
-                subtitle="Short and Sweet works best!"
-                />
-            <Input 
-                id="title"
-                label="Title"
-                disabled={isLoading}
-                register={register}
-                errors={errors}
-                required
-                type="text"
-                />
-                <hr />
-            <Input 
-                id="description"
-                label="Description"
-                disabled={isLoading}
-                register={register}
-                errors={errors}
-                required
-                type="text"
-                />
-        </div>
-    )
-}
+    if(step === STEPS.DESCRIPTION) {
+        bodyContent = (
+            <div className="flex flex-col gap-8">
+                <Heading 
+                    title="How would you describe your place?"
+                    subtitle="Short and Sweet works best!"
+                    />
+                <Input 
+                    id="title"
+                    label="Title"
+                    disabled={isLoading}
+                    register={register}
+                    errors={errors}
+                    required
+                    type="text"
+                    />
+                    <hr />
+                <Input 
+                    id="description"
+                    label="Description"
+                    disabled={isLoading}
+                    register={register}
+                    errors={errors}
+                    required
+                    type="text"
+                    />
+            </div>
+        )
+    }
 
-if(step === STEPS.PRICE) {
-    bodyContent = (
-        <div className="flex flex-col gap-8">
-            <Heading 
-                title="Now, Set your Price"
-                subtitle="How much do you charge per night"
-                />
-            <Input 
-                id="price"
-                label="Price"
-                formatPrice
-                disabled={isLoading}
-                register={register}
-                errors={errors}
-                type="number"
-                required
-                />
-        </div>
-    )
-}
+    if(step === STEPS.PRICE) {
+        bodyContent = (
+            <div className="flex flex-col gap-8">
+                <Heading 
+                    title="Now, Set your Price"
+                    subtitle="How much do you charge per night"
+                    />
+                <Input 
+                    id="price"
+                    label="Price"
+                    formatPrice
+                    disabled={isLoading}
+                    register={register}
+                    errors={errors}
+                    type="number"
+                    required
+                    max={10000} // Add max value
+                    />
+            </div>
+        )
+    }
 
     return (
         <Modal
