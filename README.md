@@ -39,7 +39,7 @@ To start using RentEase, follow these steps:
  **1. Clone the repository:**
   ```bash
 git clone https://github.com/seyaendris/Rent-Ease.git
-
+  ```
 2. Set up environment variables:
   ```bash
 DATABASE_URL=your-database-url
@@ -52,3 +52,4 @@ GOOGLE_CLIENT_ID=your-google-client-id
 GOOGLE_CLIENT_SECRET=your-google-client-secret
 
 NEXT_PUBLIC_CLOUDINARY_CLOUD_NAME=your-cloudinary-cloud-name
+```
