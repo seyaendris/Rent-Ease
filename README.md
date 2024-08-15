@@ -28,9 +28,8 @@ Welcome to **RentEase**! This is a cutting-edge web application designed for pro
 
 To start using RentEase, follow these steps:
 
- ```bash
-
  **1.Clone the repository:**
+  ```bash
 
 git clone https://github.com/seyaendris/Rent-Ease.git
 
@@ -38,7 +37,7 @@ git clone https://github.com/seyaendris/Rent-Ease.git
 **2. Set up environment variables:**
 
 Create a .env file in the root directory and add the following variables:
-
+ ```bash
 DATABASE_URL=your-database-url
 NEXTAUTH_SECRET=your-nextauth-secret
 
