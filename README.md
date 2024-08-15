@@ -40,19 +40,5 @@ To start using RentEase, follow these steps:
   ```bash
 git clone https://github.com/seyaendris/Rent-Ease.git
 
-**2. Set up environment variables:**
-
+2. Set up environment variables:
 Create a .env file in the root directory and add the following variables:
-DATABASE_URL=your-database-url
-NEXTAUTH_SECRET=your-nextauth-secret
-
-GITHUB_ID=your-github-id
-GITHUB_SECRET=your-github-secret
-
-GOOGLE_CLIENT_ID=your-google-client-id
-GOOGLE_CLIENT_SECRET=your-google-client-secret
-
-NEXT_PUBLIC_CLOUDINARY_CLOUD_NAME=your-cloudinary-cloud-name
-
-
-
