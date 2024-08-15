@@ -36,9 +36,19 @@ Welcome to **RentEase**! This is a cutting-edge web application designed for pro
 
 To start using RentEase, follow these steps:
 
- **1.Clone the repository:**
+ **1. Clone the repository:**
   ```bash
 git clone https://github.com/seyaendris/Rent-Ease.git
 
 2. Set up environment variables:
-Create a .env file in the root directory and add the following variables:
+  ```bash
+DATABASE_URL=your-database-url
+NEXTAUTH_SECRET=your-nextauth-secret
+
+GITHUB_ID=your-github-id
+GITHUB_SECRET=your-github-secret
+
+GOOGLE_CLIENT_ID=your-google-client-id
+GOOGLE_CLIENT_SECRET=your-google-client-secret
+
+NEXT_PUBLIC_CLOUDINARY_CLOUD_NAME=your-cloudinary-cloud-name
