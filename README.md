@@ -1,6 +1,6 @@
 # 🏡 RentEase - A Modern Fullstack Next.js 14 Application
 
-Welcome to RentEase! This is a cutting-edge web application designed for property owners to rent out their spaces to travelers seeking a cozy place to stay. Built with the latest technologies like Next.js 14, React, Tailwind CSS, Prisma, MongoDB, and NextAuth, RentEase offers a seamless and efficient experience for both property owners and travelers.
+Welcome to **RentEase**! This is a cutting-edge web application designed for property owners to rent out their spaces to travelers seeking a cozy place to stay. Built with the latest technologies like **Next.js 14**, **React**, **Tailwind CSS**, **Prisma**, **MongoDB**, and **NextAuth**, RentEase offers a seamless and efficient experience for both property owners and travelers.
 
 ![RentEase Homepage](https://user-images.githubusercontent.com/your-username/screenshots/homepage.png)
 
@@ -25,12 +25,12 @@ Welcome to RentEase! This is a cutting-edge web application designed for propert
 
 To start using RentEase, follow these steps:
 
-1. Clone the repository:
+ **1.Clone the repository:**
 
 git clone https://github.com/seyaendris/Rent-Ease.git
 Set up environment variables:
 
-2. Create a .env file in the root directory and add the following variables:
+**2. Create a .env file in the root directory and add the following variables:**
 
 DATABASE_URL=your-database-url
 NEXTAUTH_SECRET=your-nextauth-secret
@@ -47,4 +47,4 @@ Install dependencies and run the project:
 npm install
 npm run dev
 
-Now you're ready to explore RentEase and experience its full range of features! 🌟
+Now you're ready to explore **RentEase** and experience its full range of features! 🌟
