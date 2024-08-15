@@ -19,7 +19,9 @@ Welcome to **RentEase**! This is a cutting-edge web application designed for pro
 - **⚡ Loading & Error Pages**: Custom loading and error pages for a polished user experience.
 - **🌍 Deployed on Vercel**: Fast and reliable deployment.
 
-![RentEase Search](https://user-images.githubusercontent.com/your-username/screenshots/search.png)
+<img width="941" alt="rentease2" src="https://github.com/user-attachments/assets/16e52b42-b286-4adf-bcdb-69819c0868fb">
+
+
 
 ## 🚀 Getting Started
 
@@ -28,9 +30,11 @@ To start using RentEase, follow these steps:
  **1.Clone the repository:**
 
 git clone https://github.com/seyaendris/Rent-Ease.git
-Set up environment variables:
 
-**2. Create a .env file in the root directory and add the following variables:**
+
+**2. Set up environment variables:**
+
+Create a .env file in the root directory and add the following variables:
 
 DATABASE_URL=your-database-url
 NEXTAUTH_SECRET=your-nextauth-secret
