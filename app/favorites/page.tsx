@@ -6,7 +6,6 @@ import getCurrentUser from '../actions/getCurrentUser'
 import EmptyState from '../components/EmptyState'
 import getFavoriteListings from '../actions/getFavoriteListings'
 import FavoriteClient from './FavoriteClient'
-// import FavoriteClient from './FavoriteClient'
 
 const ListingPage = async () => {
     const currentUser = await getCurrentUser()
