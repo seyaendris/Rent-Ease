@@ -2,7 +2,8 @@
 
 Welcome to **RentEase**! This is a cutting-edge web application designed for property owners to rent out their spaces to travelers seeking a cozy place to stay. Built with the latest technologies like **Next.js 14**, **React**, **Tailwind CSS**, **Prisma**, **MongoDB**, and **NextAuth**, RentEase offers a seamless and efficient experience for both property owners and travelers.
 
-![RentEase Homepage](https://user-images.githubusercontent.com/your-username/screenshots/homepage.png)
+<img width="958" alt="rentease1" src="https://github.com/user-attachments/assets/f5a98f79-1d48-4067-a048-00c857238e99">
+
 
 ## ✨ Features
 
