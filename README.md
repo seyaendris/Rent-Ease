@@ -28,6 +28,8 @@ Welcome to **RentEase**! This is a cutting-edge web application designed for pro
 
 To start using RentEase, follow these steps:
 
+ ```bash
+
  **1.Clone the repository:**
 
 git clone https://github.com/seyaendris/Rent-Ease.git
