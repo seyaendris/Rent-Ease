@@ -54,7 +54,7 @@ const UserMenu: React.FC<UserMenuProps> = ({
 
             <div
                 onClick={toggleOpen}
-                className=" py-1   border-[1px] border-neutral-100 flex flex-row items-center gap-3 rounded-full cursor-pointer hover:shadow-md hover:shadow-cyan-200 transition"
+                className=" py-1 border-[1px] border-neutral-100 flex flex-row items-center gap-3 rounded-full cursor-pointer hover:shadow-md hover:shadow-cyan-200 transition"
                 >
                     <div className="hidden md:hidden">
                     <AiOutlineMenu  />
