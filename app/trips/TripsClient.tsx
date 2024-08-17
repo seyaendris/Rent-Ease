@@ -1,9 +1,7 @@
 "use client"
 
 import { useRouter } from "next/navigation"
-// import Container from "../components/Container"
-// import Heading from "../components/Heading"
-// import { SafeReservation, SafeUser } from "../types"
+
 import { useCallback, useState } from "react"
 import axios from "axios"
 import toast from "react-hot-toast"
@@ -11,7 +9,6 @@ import { SafeReservation, SafeUser } from "@/app/types"
 import Container from "../components/Container"
 import Heading from "../components/Heading"
 import ListingCard from "../components/listings/ListingCard"
-// import ListingCard from "../components/listings/ListingCard"
 
 interface TripsClientProps {
     reservations: SafeReservation[]
