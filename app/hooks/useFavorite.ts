@@ -2,8 +2,6 @@ import axios from "axios";
 import { useRouter } from "next/navigation";
 import { SafeUser } from "../types";
 import useLoginModal from "./useLoginModal";
-import getCurrentUser from '@/app/actions/getCurrentUser';
-import LoginModal from '../components/modals/LoginModal';
 import { useCallback, useMemo } from "react";
 import toast from "react-hot-toast";
 
